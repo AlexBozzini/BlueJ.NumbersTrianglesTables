@@ -4,6 +4,10 @@
 public class NumberUtilities {
 
     public static String getRange(int stop) {
+        int counter = 0;
+        while (counter < stop){
+        System.out.print("");
+        }
         return null;
     }
 
