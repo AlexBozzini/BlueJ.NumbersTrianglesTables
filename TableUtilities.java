@@ -1,37 +1,26 @@
- 
+import java.lang.Math; 
 import java.util.Scanner;
 public class TableUtilities {
-   public static String getFormattedNumber(int number){
-      return String.format("%3d ", number);
-    }
-    
-    public static String getRow(int rowSize){
-        String s = "";
-        for (int i = 1; i <= rowSize; i++){
-            
-        }
-        return null;
-    }
+   
     public static String getSmallMultiplicationTable() {
-        String s = "";
-        int a;
-        int b;
-        for (a = 1; a <=4; a++){
-            for (b = 1; b <=4; b++){
-                s += " " + b + "|" + "\n";
-            }
-            s += a + "\n";
-        }
-        System.out.println(s);
-        new Scanner(System.in).next();
-        return s;
+        return getMultiplicationTable(5);
     } 
 
     public static String getLargeMultiplicationTable() {
-        return null;
+        return getMultiplicationTable(10);
     }
 
     public static String getMultiplicationTable(int tableSize) {
-        return null;
+        String table = "";
+        int width = 0;
+        int height = 0;
+        
+        for(width = 1; width <= tableSize; width++){
+            for(height = 1; height <= tableSize; height ++){
+                table = table + String.format("%3d", width*height) + " |";
+            }
+            table += "\n";
+        }
+        return table;
     }
 }
